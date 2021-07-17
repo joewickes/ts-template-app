@@ -2,7 +2,6 @@
 import { withRouter } from 'react-router-dom';
 
 // Style(s)
-import './HomePageRoute.css';
 
 // Context(s)
 import Context from './../contexts/Context';
@@ -14,8 +13,8 @@ const HomePageRoute = () => {
     <Context.Consumer>
       {value => {
         return (
-          <>
-          </>
+          <div>
+          </div>
         );
       }}
     </Context.Consumer>
