@@ -1,18 +1,16 @@
 // From npm
-import React from 'react';
+import { createContext, FC } from 'react';
 
 // Service(s)
 
-const Context = React.createContext({});
+const Context = createContext({});
+
+export function ContextProvider(props: any) {
+  return (
+    <Context.Provider value={{}}>
+      {props.children}
+    </Context.Provider>
+  );
+}
 
 export default Context;
-
-export class ContextProvider extends React.Component {
-  render() {
-    return (
-      <Context.Provider value={{}}>
-        {this.props.children}
-      </Context.Provider>
-    );
-  }
-}
