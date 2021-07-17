@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // Style(s)
+import './../styles/App.css';
 
 // Component(s)
 
