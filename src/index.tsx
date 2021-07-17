@@ -1,17 +1,30 @@
+// Dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+// import dotenv from 'dotenv';
+// import dotenvExpand from 'dotenv-expand';
+
+// Style(s)
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+// Context(s)
+import { ContextProvider } from './contexts/Context';
+
+// Component(s)
+import App from './components/App';
+
+// Env
+// const myEnv = dotenv.config();
+// dotenvExpand(myEnv);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ContextProvider>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>
+  </ContextProvider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
